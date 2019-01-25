@@ -1,0 +1,21 @@
+{
+  "name": "@polpware/ngx-events",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0"
+  },
+  "main": "bundles/polpware-ngx-events.umd.js",
+  "module": "fesm5/polpware-ngx-events.js",
+  "es2015": "fesm2015/polpware-ngx-events.js",
+  "esm5": "esm5/polpware-ngx-events.js",
+  "esm2015": "esm2015/polpware-ngx-events.js",
+  "fesm5": "fesm5/polpware-ngx-events.js",
+  "fesm2015": "fesm2015/polpware-ngx-events.js",
+  "typings": "polpware-ngx-events.d.ts",
+  "metadata": "polpware-ngx-events.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}
