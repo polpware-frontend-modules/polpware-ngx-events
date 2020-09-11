@@ -1,6 +1,7 @@
 import { __values, __spread } from 'tslib';
-import { ɵɵdefineInjectable, ɵsetClassMetadata, Injectable } from '@angular/core';
+import { ɵɵdefineInjectable, ɵsetClassMetadata, Injectable, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵinject, ɵɵsetNgModuleScope, NgModule, Optional, SkipSelf } from '@angular/core';
 import { Subject } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 var GlobalEventsService = /** @class */ (function () {
     function GlobalEventsService() {
@@ -77,6 +78,39 @@ var GlobalEventsService = /** @class */ (function () {
         type: Injectable
     }], function () { return []; }, null); })();
 
+var PolpNgxEventsModule = /** @class */ (function () {
+    function PolpNgxEventsModule(parentModule) {
+        if (parentModule) {
+            throw new Error('PolpNgxEventsModule is already loaded and please import it in the AppModule only.');
+        }
+    }
+    PolpNgxEventsModule.forRoot = function () {
+        return {
+            ngModule: PolpNgxEventsModule,
+            providers: [GlobalEventsService]
+        };
+    };
+    /** @nocollapse */ PolpNgxEventsModule.ɵmod = ɵɵdefineNgModule({ type: PolpNgxEventsModule });
+    /** @nocollapse */ PolpNgxEventsModule.ɵinj = ɵɵdefineInjector({ factory: function PolpNgxEventsModule_Factory(t) { return new (t || PolpNgxEventsModule)(ɵɵinject(PolpNgxEventsModule, 12)); }, imports: [[
+                CommonModule
+            ]] });
+    return PolpNgxEventsModule;
+}());
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(PolpNgxEventsModule, { imports: [CommonModule] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(PolpNgxEventsModule, [{
+        type: NgModule,
+        args: [{
+                declarations: [],
+                imports: [
+                    CommonModule
+                ]
+            }]
+    }], function () { return [{ type: PolpNgxEventsModule, decorators: [{
+                type: Optional
+            }, {
+                type: SkipSelf
+            }] }]; }, null); })();
+
 /*
  * Public API Surface of ngx-events
  */
@@ -85,5 +119,5 @@ var GlobalEventsService = /** @class */ (function () {
  * Generated bundle index. Do not edit.
  */
 
-export { GlobalEventsService };
+export { GlobalEventsService, PolpNgxEventsModule };
 //# sourceMappingURL=polpware-ngx-events.js.map

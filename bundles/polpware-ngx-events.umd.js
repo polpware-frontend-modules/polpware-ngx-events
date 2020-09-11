@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('rxjs')) :
-    typeof define === 'function' && define.amd ? define('@polpware/ngx-events', ['exports', '@angular/core', 'rxjs'], factory) :
-    (global = global || self, factory((global.polpware = global.polpware || {}, global.polpware['ngx-events'] = {}), global.ng.core, global.rxjs));
-}(this, (function (exports, core, rxjs) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('rxjs'), require('@angular/common')) :
+    typeof define === 'function' && define.amd ? define('@polpware/ngx-events', ['exports', '@angular/core', 'rxjs', '@angular/common'], factory) :
+    (global = global || self, factory((global.polpware = global.polpware || {}, global.polpware['ngx-events'] = {}), global.ng.core, global.rxjs, global.ng.common));
+}(this, (function (exports, core, rxjs, common) { 'use strict';
 
     /*! *****************************************************************************
     Copyright (c) Microsoft Corporation.
@@ -298,7 +298,41 @@
             type: core.Injectable
         }], function () { return []; }, null); })();
 
+    var PolpNgxEventsModule = /** @class */ (function () {
+        function PolpNgxEventsModule(parentModule) {
+            if (parentModule) {
+                throw new Error('PolpNgxEventsModule is already loaded and please import it in the AppModule only.');
+            }
+        }
+        PolpNgxEventsModule.forRoot = function () {
+            return {
+                ngModule: PolpNgxEventsModule,
+                providers: [GlobalEventsService]
+            };
+        };
+        /** @nocollapse */ PolpNgxEventsModule.ɵmod = core.ɵɵdefineNgModule({ type: PolpNgxEventsModule });
+        /** @nocollapse */ PolpNgxEventsModule.ɵinj = core.ɵɵdefineInjector({ factory: function PolpNgxEventsModule_Factory(t) { return new (t || PolpNgxEventsModule)(core.ɵɵinject(PolpNgxEventsModule, 12)); }, imports: [[
+                    common.CommonModule
+                ]] });
+        return PolpNgxEventsModule;
+    }());
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && core.ɵɵsetNgModuleScope(PolpNgxEventsModule, { imports: [common.CommonModule] }); })();
+    /*@__PURE__*/ (function () { core.ɵsetClassMetadata(PolpNgxEventsModule, [{
+            type: core.NgModule,
+            args: [{
+                    declarations: [],
+                    imports: [
+                        common.CommonModule
+                    ]
+                }]
+        }], function () { return [{ type: PolpNgxEventsModule, decorators: [{
+                    type: core.Optional
+                }, {
+                    type: core.SkipSelf
+                }] }]; }, null); })();
+
     exports.GlobalEventsService = GlobalEventsService;
+    exports.PolpNgxEventsModule = PolpNgxEventsModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
