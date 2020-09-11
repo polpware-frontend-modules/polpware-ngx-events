@@ -1,11 +1,7 @@
 import { __values, __spread } from 'tslib';
-import { Injectable } from '@angular/core';
+import { ɵɵdefineInjectable, ɵsetClassMetadata, Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var GlobalEventsService = /** @class */ (function () {
     function GlobalEventsService() {
         var _this = this;
@@ -13,11 +9,8 @@ var GlobalEventsService = /** @class */ (function () {
         this._subject = new Subject();
         this._subject.asObservable().subscribe(function (next) {
             var e_1, _a;
-            /** @type {?} */
             var name = next.name;
-            /** @type {?} */
             var args = next.args;
-            /** @type {?} */
             var callback = next.callback;
             if (_this._listeners[name]) {
                 try {
@@ -40,33 +33,13 @@ var GlobalEventsService = /** @class */ (function () {
         }, function (error) {
         });
     }
-    /**
-     * @param {?} name
-     * @param {?} listener
-     * @return {?}
-     */
-    GlobalEventsService.prototype.on = /**
-     * @param {?} name
-     * @param {?} listener
-     * @return {?}
-     */
-    function (name, listener) {
+    GlobalEventsService.prototype.on = function (name, listener) {
         if (!this._listeners[name]) {
             this._listeners[name] = [];
         }
         this._listeners[name].push(listener);
     };
-    /**
-     * @param {?} name
-     * @param {?=} listener
-     * @return {?}
-     */
-    GlobalEventsService.prototype.off = /**
-     * @param {?} name
-     * @param {?=} listener
-     * @return {?}
-     */
-    function (name, listener) {
+    GlobalEventsService.prototype.off = function (name, listener) {
         if (!this._listeners[name]) {
             return;
         }
@@ -74,11 +47,8 @@ var GlobalEventsService = /** @class */ (function () {
             delete this._listeners[name];
             return;
         }
-        /** @type {?} */
         var callbacks = this._listeners[name];
-        /** @type {?} */
         var anyIndex = -1;
-        /** @type {?} */
         var index;
         for (index = 0; index < callbacks.length; index++) {
             if (callbacks[index] === listener) {
@@ -90,19 +60,7 @@ var GlobalEventsService = /** @class */ (function () {
             callbacks.splice(anyIndex, 1);
         }
     };
-    /**
-     * @param {?} name
-     * @param {?=} args
-     * @param {?=} callback
-     * @return {?}
-     */
-    GlobalEventsService.prototype.broadcast = /**
-     * @param {?} name
-     * @param {?=} args
-     * @param {?=} callback
-     * @return {?}
-     */
-    function (name, args, callback) {
+    GlobalEventsService.prototype.broadcast = function (name, args, callback) {
         if (args === void 0) { args = []; }
         if (callback === void 0) { callback = null; }
         this._subject.next({
@@ -111,24 +69,21 @@ var GlobalEventsService = /** @class */ (function () {
             callback: callback
         });
     };
-    GlobalEventsService.decorators = [
-        { type: Injectable }
-    ];
-    /** @nocollapse */
-    GlobalEventsService.ctorParameters = function () { return []; };
+    /** @nocollapse */ GlobalEventsService.ɵfac = function GlobalEventsService_Factory(t) { return new (t || GlobalEventsService)(); };
+    /** @nocollapse */ GlobalEventsService.ɵprov = ɵɵdefineInjectable({ token: GlobalEventsService, factory: GlobalEventsService.ɵfac });
     return GlobalEventsService;
 }());
+/*@__PURE__*/ (function () { ɵsetClassMetadata(GlobalEventsService, [{
+        type: Injectable
+    }], function () { return []; }, null); })();
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+/*
+ * Public API Surface of ngx-events
  */
 
 /**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * Generated bundle index. Do not edit.
  */
 
 export { GlobalEventsService };
-
 //# sourceMappingURL=polpware-ngx-events.js.map

@@ -1,3 +1,4 @@
+import * as i0 from "@angular/core";
 export interface FunctionSignature {
     name: string;
     args: any[];
@@ -10,4 +11,6 @@ export declare class GlobalEventsService {
     on(name: string, listener: any): void;
     off(name: string, listener?: any): void;
     broadcast(name: string, args?: any[], callback?: () => void): void;
+    static ɵfac: i0.ɵɵFactoryDef<GlobalEventsService, never>;
+    static ɵprov: i0.ɵɵInjectableDef<GlobalEventsService>;
 }
