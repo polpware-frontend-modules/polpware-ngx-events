@@ -56,9 +56,9 @@ class GlobalEventsService {
             callback: callback
         });
     }
+    /** @nocollapse */ static { this.ɵfac = function GlobalEventsService_Factory(t) { return new (t || GlobalEventsService)(); }; }
+    /** @nocollapse */ static { this.ɵprov = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjectable({ token: GlobalEventsService, factory: GlobalEventsService.ɵfac }); }
 }
-/** @nocollapse */ GlobalEventsService.ɵfac = function GlobalEventsService_Factory(t) { return new (t || GlobalEventsService)(); };
-/** @nocollapse */ GlobalEventsService.ɵprov = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjectable({ token: GlobalEventsService, factory: GlobalEventsService.ɵfac });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(GlobalEventsService, [{
         type: Injectable
     }], function () { return []; }, null); })();
@@ -75,10 +75,10 @@ class PolpNgxEventsModule {
             providers: [GlobalEventsService]
         };
     }
+    /** @nocollapse */ static { this.ɵfac = function PolpNgxEventsModule_Factory(t) { return new (t || PolpNgxEventsModule)(i0.ɵɵinject(PolpNgxEventsModule, 12)); }; }
+    /** @nocollapse */ static { this.ɵmod = /** @pureOrBreakMyCode */ i0.ɵɵdefineNgModule({ type: PolpNgxEventsModule }); }
+    /** @nocollapse */ static { this.ɵinj = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjector({ imports: [CommonModule] }); }
 }
-/** @nocollapse */ PolpNgxEventsModule.ɵfac = function PolpNgxEventsModule_Factory(t) { return new (t || PolpNgxEventsModule)(i0.ɵɵinject(PolpNgxEventsModule, 12)); };
-/** @nocollapse */ PolpNgxEventsModule.ɵmod = /** @pureOrBreakMyCode */ i0.ɵɵdefineNgModule({ type: PolpNgxEventsModule });
-/** @nocollapse */ PolpNgxEventsModule.ɵinj = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjector({ imports: [CommonModule] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PolpNgxEventsModule, [{
         type: NgModule,
         args: [{
