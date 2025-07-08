@@ -59,9 +59,9 @@ class GlobalEventsService {
     /** @nocollapse */ static { this.ɵfac = function GlobalEventsService_Factory(t) { return new (t || GlobalEventsService)(); }; }
     /** @nocollapse */ static { this.ɵprov = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjectable({ token: GlobalEventsService, factory: GlobalEventsService.ɵfac }); }
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(GlobalEventsService, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(GlobalEventsService, [{
         type: Injectable
-    }], function () { return []; }, null); })();
+    }], () => [], null); })();
 
 class PolpNgxEventsModule {
     constructor(parentModule) {
@@ -79,7 +79,7 @@ class PolpNgxEventsModule {
     /** @nocollapse */ static { this.ɵmod = /** @pureOrBreakMyCode */ i0.ɵɵdefineNgModule({ type: PolpNgxEventsModule }); }
     /** @nocollapse */ static { this.ɵinj = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjector({ imports: [CommonModule] }); }
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PolpNgxEventsModule, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PolpNgxEventsModule, [{
         type: NgModule,
         args: [{
                 declarations: [],
@@ -87,11 +87,11 @@ class PolpNgxEventsModule {
                     CommonModule
                 ]
             }]
-    }], function () { return [{ type: PolpNgxEventsModule, decorators: [{
+    }], () => [{ type: PolpNgxEventsModule, decorators: [{
                 type: Optional
             }, {
                 type: SkipSelf
-            }] }]; }, null); })();
+            }] }], null); })();
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(PolpNgxEventsModule, { imports: [CommonModule] }); })();
 
 /*
