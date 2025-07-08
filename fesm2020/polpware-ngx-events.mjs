@@ -78,9 +78,7 @@ class PolpNgxEventsModule {
 }
 /** @nocollapse */ PolpNgxEventsModule.ɵfac = function PolpNgxEventsModule_Factory(t) { return new (t || PolpNgxEventsModule)(i0.ɵɵinject(PolpNgxEventsModule, 12)); };
 /** @nocollapse */ PolpNgxEventsModule.ɵmod = /** @pureOrBreakMyCode */ i0.ɵɵdefineNgModule({ type: PolpNgxEventsModule });
-/** @nocollapse */ PolpNgxEventsModule.ɵinj = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjector({ imports: [[
-            CommonModule
-        ]] });
+/** @nocollapse */ PolpNgxEventsModule.ɵinj = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjector({ imports: [CommonModule] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PolpNgxEventsModule, [{
         type: NgModule,
         args: [{
