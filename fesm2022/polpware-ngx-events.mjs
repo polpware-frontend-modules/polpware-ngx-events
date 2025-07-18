@@ -56,7 +56,7 @@ class GlobalEventsService {
             callback: callback
         });
     }
-    /** @nocollapse */ static { this.ɵfac = function GlobalEventsService_Factory(t) { return new (t || GlobalEventsService)(); }; }
+    /** @nocollapse */ static { this.ɵfac = function GlobalEventsService_Factory(__ngFactoryType__) { return new (__ngFactoryType__ || GlobalEventsService)(); }; }
     /** @nocollapse */ static { this.ɵprov = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjectable({ token: GlobalEventsService, factory: GlobalEventsService.ɵfac }); }
 }
 (() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(GlobalEventsService, [{
@@ -75,7 +75,7 @@ class PolpNgxEventsModule {
             providers: [GlobalEventsService]
         };
     }
-    /** @nocollapse */ static { this.ɵfac = function PolpNgxEventsModule_Factory(t) { return new (t || PolpNgxEventsModule)(i0.ɵɵinject(PolpNgxEventsModule, 12)); }; }
+    /** @nocollapse */ static { this.ɵfac = function PolpNgxEventsModule_Factory(__ngFactoryType__) { return new (__ngFactoryType__ || PolpNgxEventsModule)(i0.ɵɵinject(PolpNgxEventsModule, 12)); }; }
     /** @nocollapse */ static { this.ɵmod = /** @pureOrBreakMyCode */ i0.ɵɵdefineNgModule({ type: PolpNgxEventsModule }); }
     /** @nocollapse */ static { this.ɵinj = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjector({ imports: [CommonModule] }); }
 }
